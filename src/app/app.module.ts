@@ -3,12 +3,14 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms'; //(1)this was added second
 
 import { AppComponent } from './app.component';
-import { ServerComponent } from './server/server.component'; //(2)address of the component
+import { ServerComponent } from './server/server.component';
+import { ServersComponent } from './servers/servers.component'; //(2)address of the component
 
 @NgModule({
   declarations: [
     AppComponent,
-    ServerComponent //(2)tells angular to find the component because it doesn't auto detect
+    ServerComponent,
+    ServersComponent //(2)tells angular to find the component because it doesn't auto detect
   ],
   imports: [
     BrowserModule,
