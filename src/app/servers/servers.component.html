@@ -1,5 +1,23 @@
 <!-- [] tells angular that we are using property binding - to dynamically bind some property -->
 <!-- ! tells the property to do the opposite (only disabled if False), meaning the button becomes enabled after 2 seconds -->
-<button class="btn btn-primary" [disabled]="!allowNewServer">Add Server</button>
+<!-- () are the indicator of event binding - like onClick in Javascript. (click) binds to click event -->
+<!-- ($event) is the data emited by the (click) event -->
+<label>Server Name</label>
+
+<input
+  type="text"
+  class="form-control"
+  (input)="onUpdateServerName($event)">
+
+<p>{{serverName}}</p>
+
+<button
+ class="btn btn-primary"
+ [disabled]="!allowNewServer"
+ (click)="onCreateServer()">Add Server</button>
+
+<!-- <p [innerText] ="allowNewServer"></p> -->
+<p>{{serverCreationStatus}}</p>
+
 <app-server></app-server>
 <app-server></app-server>
