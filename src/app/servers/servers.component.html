@@ -1,3 +1,5 @@
-<button class="btn btn-primary" disabled>Add Server</button>
+<!-- [] tells angular that we are using property binding - to dynamically bind some property -->
+<!-- ! tells the property to do the opposite (only disabled if False), meaning the button becomes enabled after 2 seconds -->
+<button class="btn btn-primary" [disabled]="!allowNewServer">Add Server</button>
 <app-server></app-server>
 <app-server></app-server>
